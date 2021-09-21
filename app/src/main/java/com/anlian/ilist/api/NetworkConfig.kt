@@ -6,7 +6,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class NetworkConfig {
-//    val URL = "https://api.themoviedb.org/3/movie/550?api_key=9b0be6c15ab706d1a34253ea1f223df9"
     val BASE_URL = "https://api.themoviedb.org/3/"
     //set interseptor address
     fun getInterseptor(): OkHttpClient {
@@ -16,17 +15,6 @@ class NetworkConfig {
             .addInterceptor(logging)
             .build()
     }
-    private val okHttpClient = OkHttpClient.Builder()
-        .addInterceptor { chain ->
-            val original = chain.request()
-
-            val requestBuilder = original.newBuilder()
-                .method(original.method, original.body)
-
-            val request = requestBuilder.build()
-            chain.proceed(request)
-        }.build()
-
     fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
