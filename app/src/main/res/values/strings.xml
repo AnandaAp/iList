@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">iList</string>
+    <string name="poster">poster</string>
+    <string name="title">title</string>
+    <string name="genre">genre</string>
+    <string name="popularity">popularity</string>
+</resources>
