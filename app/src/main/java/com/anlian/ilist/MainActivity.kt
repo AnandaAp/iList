@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        adapter = Adapter(arrayListOf())
+        adapter = Adapter(this,arrayListOf())
         binding.rcView.layoutManager = LinearLayoutManager(this)
         binding.rcView.adapter = adapter
         startRetrofit()
