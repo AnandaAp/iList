@@ -17,10 +17,11 @@ import retrofit2.Response
 class ListMovie : Fragment() {
     private lateinit var adapter: Adapter
     private lateinit var binding: FragmentListMovieBinding
+//    private var PRIVATE_KEY = "9b0be6c15ab706d1a34253ea1f223df9"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentListMovieBinding.inflate(inflater, container, false)
         val view = binding.root
         adapter = Adapter(requireActivity(), arrayListOf())
